@@ -12,7 +12,7 @@ class LinkedList:
     
     def print_list(self):
         temp = self.head
-        while temp.next is not None:
+        while temp is not None:
             print(temp.value)
             temp = temp.next
     
@@ -116,7 +116,7 @@ class LinkedList:
             return None
         temp = self.head
         before = None
-        while temp.next is not None:
+        for _ in range(self.length):
             after = temp.next
             temp.next =  before
             before = temp 
