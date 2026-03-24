@@ -1,24 +1,34 @@
 class Node:
-    def __init__(self, value):
+    def __init__(self,value):
         self.value = value
-        self.next = None
+        self.left = None
+        self.right = None
 
 
-class Stack:
+class Bst:
     def __init__(self, value):
-        self.top = Node(value)
-        self.height = 1
+        self.root = Node(value)
+        
     
-    def push(self, value):
+    def insert(self, value):
         node = Node(value)
-        node.next = self.top
-        self.top = node
-        self.height +=1
+        if self.root is None:
+            self.root = None
+        temp = self.root
+        while temp is not None:
+            if node.value > temp.value:
+                temp = temp.right
+            elif node.value < temp.value:
+                temp = temp.left
+        temp = node
     
-    def pop(self):
-        if self.height == 0: return None
-        node = self.top 
-        self.top = self.top.next
-        node.next = None
-        self.height -=1
-        return node
+    def contains(self,value):
+        temp = self.root
+        while temp is not None:
+            if temp.value == value:
+                return True
+            elif temp.value > value:
+                temp = temp.right
+            else:
+                temp = temp.left
+        return False
