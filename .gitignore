@@ -1,4 +1,6 @@
 # =====================================
+# Python generated files
+# =====================================
 __pycache__/
 *.py[cod]
 *$py.class
@@ -23,8 +25,6 @@ pip-delete-this-directory.txt
 db.sqlite3
 media/
 staticfiles/
-# If you collect static files to a specific directory, ignore it:
-
 
 # Local settings (optional)
 local_settings.py
@@ -39,7 +39,17 @@ local_settings.py
 *.code-workspace
 
 # =====================================
-# Windows
+# Linux / Fedora / KDE specific
+# =====================================
+*~                # Backup files from nano, vim, etc.
+.directory        # KDE folder metadata
+.kate-swp         # Kate editor swap files
+.fuse_hidden*     # FUSE mount leftovers
+.Trash-*          # Trash folders on external drives
+*.part            # Partially downloaded files
+
+# =====================================
+# Windows (cross‑platform safety)
 # =====================================
 Thumbs.db
 ehthumbs.db
