@@ -9,6 +9,4 @@ class Solution:
             elif i =="D":
                 record.append(record[j] *2)
 
-
-print(mate(["5","2","C","D","+"]))
     
