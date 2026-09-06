@@ -11,7 +11,6 @@ class Solution:
                 if bracket_map[char] != top_element:
                     return False
             else:
-                
                 stack.append(char)
 
         return not stack
