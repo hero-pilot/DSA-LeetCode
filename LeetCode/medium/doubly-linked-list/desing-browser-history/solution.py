@@ -10,7 +10,6 @@ class BrowserHistory:
 
     def visit(self, url: str) -> None:
         new_node = Node(url)
-        # discard forward history
         self.cur.next = new_node
         new_node.prev = self.cur
         self.cur = new_node
